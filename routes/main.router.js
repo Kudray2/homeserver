@@ -1,4 +1,6 @@
-import express from "express";
-import { usersRouter } from "./users.router.js";
+import express from 'express';
+import { usersRouter } from './user.router.js';
 
-export const mainRouter = express().use("/users", usersRouter);
+// eslint-disable-next-line import/prefer-default-export
+export const mainRouter = express().use('/users', usersRouter);
+

@@ -1,6 +1,10 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
+  id: {
+    type: String,
+    required: true,
+  },
   userName: {
     type: String,
     required: true,
@@ -13,9 +17,9 @@ const userSchema = new mongoose.Schema({
     minLength: 5,
   },
   userType: {
-    type: Boolean,
+    type: String,
     required: true,
   },
 });
 
-export const UserModule = mongoose.model("UserModel", userSchema);
+export const User = mongoose.model('User', userSchema);
